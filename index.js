@@ -12,11 +12,14 @@ app.get('/', (request, response) => {
     return response.json({teste: 'resposta 1'});
 })
 
-/*app.post('/fatorial', (req,res) =>{
+app.post('/fatorial', (req,res) =>{
 
+    const body = req.body;
+    const result = fatorialSum(body.num1,body.num2);
 
+    return res.json({result: result});
 
-}*/
+});
 
 app.post('/problema2')
 
